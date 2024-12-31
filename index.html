@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CAJERO TPV</title>
+
+    <script src="./jsQR.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="contenido">
+        <div><img
+                src='https://media.istockphoto.com/id/1206806317/es/vector/icono-del-carrito-de-compras-aislado-sobre-fondo-blanco.jpg?s=612x612&w=0&k=20&c=sdScWRH_AeHdG6vHzMn8xUHCpe7iM6O1Skgi2lPuKG0='
+                style='width: 50px;' /> MERCAMONA</div>
+        <button onclick="imprimirContenido('contenido')">Imprimir</button>
+        <table id="dynamicTable">
+            <thead>
+                <tr>
+                    <th><input type="text" id="col1" name="col1"></th>
+                    <th><input type="number" id="col2" name="col2"></th>
+                    <th><button onclick="addRow()">Añadir</button></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se añadirán aquí dinámicamente -->
+            </tbody>
+            <tr>
+                <th>TOTAL:</th>
+                <th>
+                    <p id="total" style="text-align: right;"></p>
+                </th>
+                <th></th>
+            </tr>
+        </table>
+        <div class="webcam-container">
+            <video id="webcam" autoplay playsinline width="320" height="240"></video>
+            <canvas id="qr-canvas" hidden></canvas>
+        </div>
+    </div>
+
+
+    <script src="scriptQr.js"></script>
+</body>
+
+</html>
